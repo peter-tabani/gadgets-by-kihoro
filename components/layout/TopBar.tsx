@@ -1,6 +1,6 @@
 export default function TopBar() {
   return (
-    <div className="border-b border-white/10 bg-black text-[10px] text-white/85">
+    <div className="hidden border-b border-white/10 bg-black text-[10px] text-white/85 md:block">
       <div className="mx-auto flex max-w-[1600px] items-center justify-between gap-4 px-3 py-1.5 xl:px-6">
         <div className="hidden items-center gap-5 md:flex">
           <span>Trusted gadgets in Kenya</span>
