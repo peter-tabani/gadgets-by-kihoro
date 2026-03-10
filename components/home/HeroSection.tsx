@@ -42,25 +42,27 @@ export default function HeroSection() {
           </div>
         </div>
 
-        <div className="ml-auto grid w-full max-w-[560px] grid-cols-1 gap-5 sm:grid-cols-2">
-          {heroActions.map((item) => (
-            <button
-              key={item.id}
-              className="flex min-h-[180px] items-center justify-center border border-white/10 bg-black px-6 text-center text-[20px] font-bold leading-tight text-white transition hover:bg-white hover:text-black md:text-[22px]"
-            >
-              {item.label}
-            </button>
-          ))}
+        <div className="ml-auto w-full max-w-[560px]">
+  <div className="hidden grid-cols-1 gap-5 sm:grid-cols-2 lg:grid">
+    {heroActions.map((item) => (
+      <button
+        key={item.id}
+        className="flex min-h-[180px] items-center justify-center border border-white/10 bg-black px-6 text-center text-[20px] font-bold leading-tight text-white transition hover:bg-white hover:text-black md:text-[22px]"
+      >
+        {item.label}
+      </button>
+    ))}
+  </div>
 
-          <div className="flex flex-wrap gap-4 sm:col-span-2 sm:justify-end">
-            <button className="border border-white/10 bg-black px-7 py-4 text-[18px] font-bold text-white transition hover:bg-white hover:text-black">
-              Chat Live
-            </button>
-            <button className="border border-white/10 bg-black px-7 py-4 text-[18px] font-bold text-white transition hover:bg-white hover:text-black">
-              Text Us
-            </button>
-          </div>
-        </div>
+  <div className="mt-4 flex flex-wrap gap-3 sm:mt-5 sm:justify-end">
+    <button className="border border-white/10 bg-black px-6 py-3 text-[15px] font-bold text-white transition hover:bg-white hover:text-black sm:px-7 sm:py-4 sm:text-[18px]">
+      Chat Live
+    </button>
+    <button className="border border-white/10 bg-black px-6 py-3 text-[15px] font-bold text-white transition hover:bg-white hover:text-black sm:px-7 sm:py-4 sm:text-[18px]">
+      Text Us
+    </button>
+  </div>
+</div>
       </div>
     </section>
   );

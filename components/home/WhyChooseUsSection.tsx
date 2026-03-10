@@ -39,26 +39,28 @@ export default function WhyChooseUsSection() {
           </p>
         </div>
 
-        <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
-          {reasons.map((reason, index) => (
-            <article
-              key={reason.title}
-              className="rounded-[28px] border border-black/10 bg-[#f7f7f7] p-6 transition hover:-translate-y-1 hover:bg-white hover:shadow-[0_10px_30px_rgba(15,23,42,0.07)]"
-            >
-              <div className="flex h-12 w-12 items-center justify-center rounded-full border border-black/10 bg-white text-[16px] font-semibold text-black">
-                0{index + 1}
-              </div>
-
-              <h3 className="mt-6 text-[22px] font-semibold tracking-[-0.03em] text-black">
-                {reason.title}
-              </h3>
-
-              <p className="mt-4 text-[15px] leading-7 text-black/65">
-                {reason.description}
-              </p>
-            </article>
-          ))}
+        <div className="-mx-4 overflow-x-auto px-4 pb-2 hide-scrollbar md:mx-0 md:px-0">
+  <div className="flex gap-4 md:grid md:grid-cols-2 xl:grid-cols-4">
+    {reasons.map((reason, index) => (
+      <article
+        key={reason.title}
+        className="w-[84vw] min-w-[84vw] rounded-[24px] border border-black/10 bg-[#f7f7f7] p-5 transition hover:-translate-y-1 hover:bg-white hover:shadow-[0_10px_30px_rgba(15,23,42,0.07)] sm:w-[360px] sm:min-w-[360px] md:min-w-0 md:p-6"
+      >
+        <div className="flex h-11 w-11 items-center justify-center rounded-full border border-black/10 bg-white text-[15px] font-semibold text-black md:h-12 md:w-12 md:text-[16px]">
+          0{index + 1}
         </div>
+
+        <h3 className="mt-5 text-[20px] font-semibold tracking-[-0.03em] text-black md:mt-6 md:text-[22px]">
+          {reason.title}
+        </h3>
+
+        <p className="mt-3 text-[15px] leading-7 text-black/65 md:mt-4">
+          {reason.description}
+        </p>
+      </article>
+    ))}
+  </div>
+</div>
       </div>
     </section>
   );
